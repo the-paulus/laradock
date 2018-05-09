@@ -17,6 +17,8 @@ EXPOSE 80 443
 
 WORKDIR /var/www/
 
+RUN mkdir /var/www/public
+
 COPY vhost.conf /etc/apache2/sites-enabled/vhost.conf
 
 ENTRYPOINT ["/opt/docker/bin/entrypoint.sh"]
